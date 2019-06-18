@@ -105,7 +105,7 @@ class TodosContainer extends Container {
         const stateItem = list[key] || [];
         const item = {completed: false, text, id: stateItem.length + 1}
 
-        this.setState({list: {...list, [key]: [...list[key], item]}})
+        this.setState({list: {...list, [key]: [...list[key], item]}}, this.syncStorage)
     }
 }
 
